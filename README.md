@@ -1,2 +1,2 @@
 # notebook
-my space
+my space to study 
