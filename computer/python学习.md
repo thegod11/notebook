@@ -1,0 +1,60 @@
+==使用Anaconda配置python即可==
+
+- 缺乏库文件的时候，可以去[Archived: Python Extension Packages for Windows - Christoph Gohlke (uci.edu)](https://www.lfd.uci.edu/~gohlke/pythonlibs/#lxml)下载whl文件后，使用pip安装这个文件即可（tab补全）
+- jupyter notebook 使用
+  - shift+回车 是运行单元格
+- type(变量名)  可以查看任何库里的变量类型
+  - str(变量) 可以转为字符串
+  - 1.3e-5  、1.3e10 科学计数法表示小数或很大的数
+- 字符串操作
+  - 乘法、加法都是允许的
+  - len(变量名) 
+  - 变量名.split(分隔符) 默认按照空格分隔成list  
+  - 分隔符.join(list变量) 合并成字符串
+  - 新字符串 = 变量名.replace(原字符串，替换字符串)
+  - .lower() 与.upper() 转换英文大小写
+  - .strip() 去掉前后的空格，.lstrip() 去掉左边的空格， .rstrip()去掉右边的空格
+  - 格式化：‘{}’.format(参数)  {} 里可以书写参数的序号，也可以书写形参名  `{a}'.format(a=1)`
+- 索引操作
+  - 从左向右0开始，从右向左-1开始
+  - 切片的时候，：区间是左闭右开的；当缺省一侧变量时，是默认 从开头 或是 到结尾；`a[::2] #每隔2个取一个值`
+- list
+  - 乘法、加法都允许（类似字符串，进行拼接）
+  - del a[i] ：删除i位置的元素，可以利用索引操作删除一系列
+  - num in a ：num是否在a当中；not in 同理
+  - .count(元素) 返回元素个数，.index(元素) 返回元素的下标
+  -  .append(元素) 添加元素，.insert(下标，元素) 插入元素， .remove(元素) 删除元素
+  - .pop(下标) 返回下标元素，并删除下标元素
+  - .sort() 是原来的list进行排序，sorted(list变量) 返回一个排好序的新list
+  - .reverse() 是进行反转
+- 字典dict
+  - dict[key] = value 即可添加元素。
+  - `dict = {key1 : value1, key2 : value2, ....}`
+  - .update(新字典变量) 用新字典去更新旧的字典
+  - .keys() 返回所有关键词, .values() 返回所有值 , .items() 返回所有键值对
+- 集合（set）
+  - 初始化 `set = set([123, 456, 789])`
+  - 初始化`set = {123, 456}`没有键值对就是集合
+  - a.union(b) 取a与b的交集 （或是用| ）， a.intersection(b) 取交集（或是用&）
+  - a.issubset(b) a是b的子集
+  - .add(元素) 添加元素， .update(list列表) 用列表更新集合
+- id(变量) 查看变量的地址
+- numpy
+  - numpy.array([]) 只能存<font color='red'>同类型</font>的值，会统一向通用的类型转换（int -- > float）
+  - numpy.genfromtxt( 文件名，delimiter=分隔符，dtype=类型，skip_header=1)
+  - numpy数组 == 元素，相当于对每一个进行判断，返回一个array数组全是bool值
+  - bool类型数组是可以作为索引的，返回为True的下标的元素
+  - .astype(float) 转化为float类型
+  - .sum(axis=1) 在axis维度进行加法：==其他维度相同，axis维度不同的进行相加==
+  - np.zeros((维度要求))，np.ones((维度要求))，np.arange(起始点，终止点，间隔) 返回一个array数组
+  - np.linespace(起始点，终止点，数字总数) 从起始到终点造出多少数字
+  - A*B 是对应位置相乘，A.dot(B) 矩阵乘法
+  - a.ravel() 就是进行flatten操作
+  - a.shape = (6,2) 也相当于 reshape(6, 2)
+  - np.hstack(a, b) 就是a与b横着拼，np.vstack(a, b) 就是a与b竖着拼
+  - np.hsplit(a, 指定) 竖着切，np.vsplit() 横着切
+  - `c = a.view()`虽然c的id与a不同，但是共用的值，一个改变值另一个也会变
+  - `d = a.copy()` d与a不是一共用值
+  - .argmax(axis=0) 返回每列最大值==索引==的list
+  - np.argsort(array数组) 返回排序后对应的原来索引list
+

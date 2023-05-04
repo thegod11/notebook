@@ -1,3 +1,5 @@
+## 环境配置
+
 1，新建一个仓库，在仓库的setting设置里，general向下翻找到danger zone就有
 2，打开git，输入ssh-keygen -o获得ssh公钥，cat .ssh/id_rsa.pub 可以看到公钥
 pwd 命令查看当前所在路径
@@ -7,3 +9,7 @@ pwd 命令查看当前所在路径
 6，将notebook文件夹直接拖进typora即可操作
 7，git status查看当前的仓库状态，git add .   ---> git commit -m "标记信息" ----> git push 增加所有新增加的文件
 8，每次上传前先进入本地仓库文件中，再git pull（上传记得开VPN，而且多试几次）
+
+## MarkDown使用
+
+ctrl + / 是进入纯代码模式，再按一次显示效果。
